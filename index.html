@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no" />
+    <title>Lolcatware</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/prismjs@1/themes/prism-tomorrow.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/normalize.css@7/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/spectacle/lib/themes/default/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/prismjs@1/prism.js"></script>
+    <script src="https://unpkg.com/prismjs@1/components/prism-jsx.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15/prop-types.js"></script>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <script src="https://unpkg.com/spectacle/dist/spectacle.js"></script>
+    <script src="https://unpkg.com/spectacle/lib/one-page.js"></script>
+    <script type="text/spectacle">
+      () => {
+        // Customize the default theme.
+        const { themes: { defaultTheme } } = Spectacle;
+        const theme = defaultTheme({
+          primary: "#ff4081"
+        });
+
+        // --------------------------------------------------------------------
+        // The presentation!
+        // --------------------------------------------------------------------
+        return (
+          <Deck transition={["zoom", "slide"]} theme={theme} transitionDuration={500}>
+            <Slide transition={["zoom"]} bgColor="primary">
+              <Image src={"assets/img/lolcat-1.png"} margin="0px auto 40px" height="222px"/>
+              <Heading size={1} fit caps lineHeight={1} textColor="black">
+                Lolcatware!
+              </Heading>
+              <Heading size={1} fit lineHeight={1.2} >
+                a new business model for SAAS side-projects
+              </Heading>
+              <Text textSize="1.5em" margin="20px 0px 0px" bold>[ swipe or hit right to learn more ]</Text>
+            </Slide>
+            <Slide transition={["slide"]} bgImage={"assets/img/gif/cat_banana.gif"} bgDarken={0.55}>
+              <Appear fid="1">
+                <Heading size={1} caps fit textColor="primary">
+                  if you are ok with lolcats
+                </Heading>
+              </Appear>
+              <Appear fid="2">
+                <Heading size={1} caps fit textColor="tertiary">
+                  eating your content every now and then
+                </Heading>
+              </Appear>
+              <Appear fid="3">
+                <Heading size={1} caps fit textColor="primary">
+                  you can use the service for free
+                </Heading>
+              </Appear>
+            </Slide>
+            <Slide transition={["slide"]} bgColor="primary">
+              <Image src={"assets/img/lolcat-2.png"} margin="0px auto 40px" height="222px"/>
+              <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+                Don't want no lolcats?
+              </Heading>
+            </Slide>
+            <Slide transition={["slide"]} bgImage={"assets/img/gif/cat_eyes.gif"} bgDarken={0.55}>
+              <Heading size={1} caps fit textColor="tertiary">
+                then you have to pay
+              </Heading>
+            </Slide>
+            <Slide transition={["slide"]} bgColor="primary">
+              <Image src={"assets/img/lolcat-3.png"} margin="0px auto 40px" height="222px"/>
+              <Heading size={1} caps fit textColor="tertiary">
+                so much batter than f*cking ads
+              </Heading>
+              <Heading size={1} caps fit textColor="tertiary">
+                don't you think?
+              </Heading>
+            </Slide>
+            <Slide transition={["slide"]} bgImage={"assets/img/gif/cat_piano.gif"} bgDarken={0.55}>
+              <Heading size={1} caps textColor="tertiary">
+                &hearts;
+              </Heading>
+              <Link href="https://meetpacking.co" target="_blank">
+                <Text textSize="1.5em" textColor="tertiary" margin="20px 0px 0px" bold>meetpacking.co</Text>
+              </Link>
+            </Slide>
+          </Deck>
+        );
+      }
+    </script>
+</body>
+</html>
